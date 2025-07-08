@@ -31,7 +31,7 @@ export default function HomePage() {
                 setAllCourses(data);
                 setFilteredCourses(data);
             } catch (err) {
-                console.error('Échec de la récupération des cours pour la page d\'accueil :', err);
+                console.error('Échec de la récupération des cours pour la page d&apos;accueil :', err);
                 setError(err.message);
             } finally {
                 setIsLoading(false);
@@ -72,7 +72,7 @@ export default function HomePage() {
     if (error) {
         return (
             <div className="text-center py-12 text-red-600">
-                <p>Erreur lors du chargement des cours pour la page d'accueil : {error}</p>
+                <p>Erreur lors du chargement des cours pour la page d&apos;accueil : {error}</p>
                 <p>Veuillez vérifier votre API et la connexion à la base de données.</p>
             </div>
         );
