@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* app/globals.css */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* You might still want some basic global styles like box-sizing or font family */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Styles for your content area (you can apply a class to the wrapper div) */
+.article-content {
+  /* Ensure the container has some basic text properties */
+  color: #475569; /* Your specified text color */
+  line-height: 1.625; /* Your specified leading-relaxed equivalent */
+  /* Add more base styles here if needed */
+}
+
+.article-content h1 {
+  font-size: 2.5em; /* Approximately text-4xl */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Space below heading */
+  margin-top: 2rem; /* Space above heading */
+}
+
+.article-content h2 {
+  font-size: 2em; /* Approximately text-3xl */
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.article-content h3 {
+  font-size: 1.75em; /* Approximately text-2xl */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.article-content h4 {
+  font-size: 1.5em; /* Approximately text-xl */
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem; /* Space below paragraphs */
+}
+
+.article-content ul {
+  list-style: disc; /* Reintroduce bullet points */
+  margin-left: 1.5rem; /* Indent the list */
+  margin-bottom: 1.25rem;
+}
+
+.article-content ol {
+  list-style: decimal; /* Reintroduce numbered lists */
+  margin-left: 1.5rem; /* Indent the list */
+  margin-bottom: 1.25rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.article-content a {
+  color: #007bff; /* A standard blue for links */
+  text-decoration: underline; /* Underline links */
+}
+
+.article-content a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.article-content strong {
+  font-weight: bold; /* Make strong text bold */
+}
+
+.article-content em {
+  font-style: italic; /* Make em text italic */
+}
+
+/* Add styles for other common elements as needed */
+.article-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+.article-content pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto; /* For long code lines */
+  margin-bottom: 1.25rem;
+}
+
+.article-content code {
+  font-family: 'Courier New', monospace;
+  background-color: #eee;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.article-content pre code {
+  background-color: transparent; /* No extra background for code inside pre */
+  padding: 0;
+}
+
+.article-content img {
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto;
+  display: block; /* Remove extra space below images */
+  margin: 1.5rem 0;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.article-content th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
